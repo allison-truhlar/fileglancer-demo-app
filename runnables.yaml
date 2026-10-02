@@ -25,6 +25,13 @@ runnables:
         min: 1
         max: 100
 
+      - flag: --threshold
+        name: Threshold
+        type: number
+        description: A decimal value that is only logged, for testing number input
+        required: false
+        default: 0.05
+
       - flag: --output_dir
         name: Output Directory
         type: directory

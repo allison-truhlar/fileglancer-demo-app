@@ -23,6 +23,10 @@ def main():
         help="Number of times to repeat the message",
     )
     parser.add_argument(
+        "--threshold", type=float, default=0.05,
+        help="Decimal value that is only logged",
+    )
+    parser.add_argument(
         "--output_dir", type=str, default="",
         help="Directory to write output file (optional)",
     )
@@ -44,6 +48,7 @@ def main():
     logger.info(f"Sleep seconds: {args.sleep_seconds}")
     logger.info(f"Message: {args.message}")
     logger.info(f"Repeat: {args.repeat}")
+    logger.info(f"Threshold: {args.threshold}")
     logger.info(f"Output dir: {args.output_dir or '<none>'}")
     logger.info(f"Verbose: {args.verbose}")
     logger.info(f"Log level: {args.log_level}")
